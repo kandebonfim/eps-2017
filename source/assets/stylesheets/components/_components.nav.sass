@@ -1,0 +1,49 @@
+/// @group components
+/// @name nav
+
+.nav
+  position: fixed
+  z-index: 1
+
+.nav__logo
+  position: fixed
+  top: 0
+  left: 0
+  margin: 5em
+  z-index: 1
+
+.nav--main
+  left: 0
+  bottom: 0
+  margin: 5em
+  transform-origin: 0 0
+  transform: rotate(-90deg)
+  display: flex
+  flex-direction: row-reverse
+  justify-content: space-around
+
+.nav__item
+  text-transform: uppercase
+  font-size: 1em
+  letter-spacing: .1em
+  cursor: pointer
+  position: relative
+  display: flex
+  transition: .2s
+
+  & + &
+    margin-right: 2em
+
+  &:hover, &.active
+    color: $color-blue
+
+    .nav__bar
+      width: 1em
+      background-color: $color-blue
+
+.nav__bar
+  width: 0em
+  height: 2px
+  align-self: center
+  margin-left: .3em
+  transition: inherit

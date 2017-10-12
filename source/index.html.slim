@@ -1,11 +1,19 @@
+= link_to '/', class: 'nav__logo' do
+  = image_tag 'logo-eps.svg'
+
+.nav.nav--main
+  - data.nav.main.each do |item|
+    = link_to "##{item.parameterize}", class: 'nav__item' do
+      = item
+      .nav__bar
+
 .section.section--full
-  = image_tag 'eps-logo.svg', class: 'section__logo'
+  = image_tag 'logo-eps-full.svg', class: 'section__image'
 
 .section.section--full.section--white
 
 .section.section--full
 
-.section.section--full.section--white
-/ .section--no-triangle
+.section.section--full.section--white.section--no-triangle
 
 .section.section--full
