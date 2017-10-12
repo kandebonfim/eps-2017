@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="622px" height="509px" viewBox="0 0 622 509" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>CONTENT</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="52.373407%" y1="48.6573827%" x2="8.34463124%" y2="53.3690365%" id="linearGradient-1">
+            <stop stop-color="#2962FF" offset="0%"></stop>
+            <stop stop-color="#FAFAFA" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="62.0036326%" y1="78.430585%" x2="34.7544449%" y2="21.5667676%" id="linearGradient-2">
+            <stop stop-color="#2962FF" offset="0%"></stop>
+            <stop stop-color="#FAFAFA" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="WEBSITE" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="HOME-100%-MENU-CLOSED" transform="translate(-350.000000, -258.000000)">
+            <g id="HOME---100%">
+                <g id="CONTENT" transform="translate(336.000000, 278.000000)">
+                    <g id="CIRCLE" transform="translate(155.000000, 0.000000)" stroke-width="40" stroke-linecap="round">
+                        <ellipse id="--" stroke="url(#linearGradient-1)" stroke-dasharray="1204.140014648438,9999" cx="230.5" cy="234.5" rx="230.5" ry="234.5"></ellipse>
+                        <ellipse id="--" stroke="url(#linearGradient-2)" stroke-dasharray="704.1400146484375,9999" transform="translate(230.000000, 234.500000) rotate(-135.000000) translate(-230.000000, -234.500000) " cx="230" cy="234.5" rx="154" ry="156.5"></ellipse>
+                    </g>
+                    <g id="Logo/Name" transform="translate(0.000000, 77.000000)" fill="#212121">
+                        <text id="EPS" font-family="Dosis-Bold, Dosis" font-size="247" font-weight="bold">
+                            <tspan x="0" y="254">EPS</tspan>
+                        </text>
+                        <text id="ELECTRIC-POWER-SYSTE" font-family="OpenSans-Semibold, Open Sans" font-size="31" font-weight="500" letter-spacing="0.400000006">
+                            <tspan x="12" y="304">ELECTRIC POWER SYSTE</tspan>
+                            <tspan x="370.505859" y="304">M</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

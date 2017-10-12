@@ -2,6 +2,40 @@
 /// @name section
 
 .section
+  display: flex
+  flex-direction: column
+  justify-content: center
+  position: relative
+
+.section__logo
+  align-self: center
+  max-width: 24vw
 
 .section--full
   height: 100vh
+
+  &.section--white
+    height: 60vh
+
+.section--white
+  background-color: white
+  padding: 20vh 0
+
+  &:before,
+  &:after,
+    content: ''
+    position: absolute
+    top: 0
+    border-style: solid
+    border-width: 20vh 100vw 0 0
+    border-color: $soft-grey transparent transparent transparent
+
+  &:after
+    top: initial
+    bottom: 0
+    border-width: 0 0 20vh 100vw
+    border-color: transparent transparent $soft-grey transparent
+
+.section--no-triangle:after
+  display: none
+
