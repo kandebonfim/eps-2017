@@ -11,6 +11,21 @@
   align-self: center
   max-width: 24vw
 
+.section__title
+  font-size: 3em
+  text-transform: uppercase
+  font-weight: 800
+
+.section__paragraph
+  font-size: 1.4em
+  color: $dark-grey
+  margin-top: 2em
+  line-height: 1.4
+  font-weight: 300
+
+  & + &
+    margin-top: 1em
+
 .section--full
   height: 100vh
 
@@ -39,3 +54,7 @@
 .section--no-triangle:after
   display: none
 
+.section--circles
+  background-position: center
+  background-size: 36%
+  background-repeat: no-repeat
