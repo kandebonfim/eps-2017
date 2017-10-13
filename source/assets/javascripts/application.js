@@ -22,7 +22,6 @@ window.addEventListener('scroll', (function(event) {
     progress = (el.getBoundingClientRect().top - y) / el.getBoundingClientRect().height;
     progress = progress * -1;
     progress = Math.max(0, progress);
-    console.log(progress);
     progressBar = sessionLink[index].querySelector('.nav__bar');
     if (progress > 0.5 && progress < 1.5) {
       sessionLink[index].classList.add('active');

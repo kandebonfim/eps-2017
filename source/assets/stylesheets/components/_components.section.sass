@@ -26,6 +26,49 @@
   & + &
     margin-top: 1em
 
+.section__phone
+  font-size: 2.4em
+  font-weight: 800
+  margin-top: 1em
+
+.section__email
+  font-size: 2em
+  margin-top: .6em
+
+.section__phone,
+.section__email,
+.section__cta
+  position: relative
+
+  &:before,
+  &:after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 40%
+    bottom: -.2em
+    left: 0
+    background-color: rgba(black, .1)
+    transition: .2s
+
+  &:after
+    width: 0%
+    background-color: rgba($color-blue, .8)
+    height: 10%
+
+  &:hover
+    &:after
+      width: 100%
+
+    &:before
+      width: 0%
+
+.section__cta
+  margin-top: 4em
+  color: $color-blue
+  font-size: 1.4em
+  font-weight: 800
+
 .section--full
   height: 100vh
 
@@ -50,9 +93,6 @@
     bottom: 0
     border-width: 0 0 20vh 100vw
     border-color: transparent transparent $soft-grey transparent
-
-.section--no-triangle:after
-  display: none
 
 .section--circles
   background-position: center
