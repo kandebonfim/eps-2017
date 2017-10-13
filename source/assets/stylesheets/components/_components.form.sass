@@ -1,0 +1,59 @@
+/// @group components
+/// @name form
+
+.form
+  min-width: 28vw
+  align-self: center
+  z-index: 2
+  padding: 5em
+
+.form__label,
+.form__input
+  transition: .2s
+  opacity: 0
+  transform: translateX(3em)
+
+  body.modal-is-active &
+    opacity: 1
+    transform: translateX(0em)
+    transition: .2s .4s
+
+    @for $i from 1 through 7
+      &:nth-child(#{$i})
+        transition-delay: $i * .03s + .2s
+
+  @for $i from 1 through 7
+    &:nth-child(#{$i})
+      transition-delay: ($i - 1) * .03s
+
+.form__label
+  padding: .2em .8em
+  color: rgba(white, .3)
+  text-transform: uppercase
+
+  .form__input + &
+    margin-top: 1.4em
+
+.form__input
+  width: 100%
+  padding: 1em 1.2em
+  background-color: rgba(white, .15)
+  box-sizing: border-box
+  border-radius: 1.6em
+  margin-top: .8em
+  color: rgba(white, .7)
+  font-size: .8em
+
+  &:hover, &:focus
+    box-shadow: 0 14px 28px rgba(black, .25)
+
+.form__submit
+  background-color: $color-blue
+  margin-top: 1.4em
+  text-align: center
+  font-family: inherit
+  font-size: 1.2em
+  letter-spacing: .1em
+  padding: .6em
+  color: white
+  text-transform: uppercase

@@ -27,4 +27,20 @@
     br
     = mail_to data.global.email, data.global.email, class: 'section__email'
     br
-    = link_to 'ENVIAR MENSAGEM ?', 'ENVIAR MENSAGEM ?', class: 'section__cta'
+    = link_to 'ENVIAR MENSAGEM ?', '#contato', onclick: 'toggleModal(this);', class: 'section__cta js-'
+
+.modal
+  .modal__background onclick='toggleModal(this);'
+  form.form action="https://formspree.io/#{data.global.email}" method="POST"
+    .form__label Nome
+    input.form__input name="name"
+    .form__label Email
+    input.form__input name="_replyto"
+    .form__label Mensagem
+    textarea.form__input name="message"
+    input.form__input.form__submit type="submit" value='Enviar'
+
+javascript:
+  function toggleModal(e) {
+    document.body.classList.toggle('modal-is-active');
+  }

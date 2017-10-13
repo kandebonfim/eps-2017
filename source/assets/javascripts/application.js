@@ -8,6 +8,7 @@ if ('addEventListener' in document) {
 	}, false);
 }
 
+// Scroller
 window.addEventListener('scroll', (function(event) {
   var d, e, g, sessionLink, progressBar, targets, w, y;
   w = window;
