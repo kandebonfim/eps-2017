@@ -15,6 +15,23 @@
   font-size: 3em
   text-transform: uppercase
   font-weight: 800
+  position: relative
+
+  &--highlight
+    &:before, &:after
+      content: ''
+      height: .6em
+      width: 2em
+      background-color: $color-blue
+      border-radius: 3em
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      margin: 0 .5em
+
+    &:before
+      width: 100vw
+      right: 100%
 
 .section__paragraph
   font-size: 1.4em
