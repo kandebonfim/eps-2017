@@ -3,17 +3,17 @@
 
 .nav.nav--main
   - data.nav.main.each do |item|
-    = link_to "##{item.parameterize}", class: 'nav__item' do
+    = link_to "##{item.parameterize}", class: 'nav__item js-session-link' do
       = item
       .nav__bar
 
-.section.section--full
+#inicio.section.section--full.js-scrollable-session
   = image_tag 'logo-eps-full.svg', class: 'section__image'
 
-.section.section--full.section--white
+#solucoes.section.section--full.section--white.js-scrollable-session
 
-.section.section--full
+#sobre.section.section--full.js-scrollable-session
 
-.section.section--full.section--white.section--no-triangle
+#clientes.section.section--full.section--white.section--no-triangle.js-scrollable-session
 
-.section.section--full
+#contato.section.section--full.js-scrollable-session
