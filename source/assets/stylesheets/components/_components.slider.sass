@@ -1,0 +1,63 @@
+/// @group components
+/// @name slider
+
+.slider
+  display: flex
+  margin-top: 2em
+
+.slider__controls
+  align-self: center
+
+.slider__button
+  width: 2em
+  height: 2em
+  border-radius: 50%
+  border: 3px solid $color-blue
+  align-self: center
+  position: relative
+  transition: .2s
+  margin: 1.4em 0
+
+  &:after
+    content: ''
+    position: absolute
+    width: .5em
+    height: .5em
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%) rotate(45deg)
+    border: 3px solid transparent
+    border-color: inherit
+
+    // Right arrow
+    border-width: 0 0 3px 3px
+    margin-left: .15em
+
+  // Left arrow
+  &:last-child:after
+    border-width: 3px 3px 0 0
+    margin-left: - .15em
+
+  &:hover
+    background-color: $color-blue
+
+    &:after
+      border-color: white
+
+.slider__swiper
+  min-width: 40vw
+  margin-left: 1em
+
+.slider__item
+  display: flex
+  flex-wrap: wrap
+
+.slider__logo
+  width: calc(100% / 3 - 3em)
+  align-self: center
+  margin: 2em 1.5em 0 1.5em
+  display: flex
+  justify-content: center
+
+  img
+    max-height: 3em

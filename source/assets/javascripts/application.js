@@ -33,3 +33,12 @@ window.addEventListener('scroll', (function(event) {
     }
   });
 }), false);
+
+var clients = new Swiper('.js-clients', {
+  pagination: '.swiper-pagination',
+  paginationClickable: true,
+  loop: true,
+  slidesPerView: 1,
+  nextButton: '.js-cliente-next',
+  prevButton: '.js-cliente-prev'
+});

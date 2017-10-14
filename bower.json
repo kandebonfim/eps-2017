@@ -1,0 +1,20 @@
+{
+  "name": "eps-2017",
+  "description": "[![forthebadge](http://forthebadge.com/images/badges/fuck-it-ship-it.svg)](http://www.startae.com) [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://www.startae.com)",
+  "main": "index.js",
+  "authors": [
+    "Startaê (https://startae.com)"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/kandebonfim/eps-2017",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "swiper": "^4.0.1"
+  }
+}

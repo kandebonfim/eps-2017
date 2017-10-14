@@ -19,6 +19,20 @@
     .section__paragraph Seja qual for a sua necessidade, estamos aqui para atendê-lo com toda a dedicação e confiança que só a EPS Brasil oferece.  ​
 
 #clientes.section.section--full.section--white.js-scrollable-session
+  .container
+    .section__title Clientes
+    .slider
+      .slider__controls
+        .slider__button.js-cliente-prev
+        .slider__button.js-cliente-next
+      .slider__swiper.swiper-container.js-clients
+        .swiper-pagination
+        .swiper-wrapper
+          - data.clients.each do |client_list|
+            .slider__item.swiper-slide
+              - client_list.each do |client|
+                .slider__logo
+                  = image_tag 'logos/'+client.parameterize+'.png'
 
 #contato.section.section--full.section--circles.js-scrollable-session style="background-image: url(#{image_path('bg-circles.png')})"
   .container
