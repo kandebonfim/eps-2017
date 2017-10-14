@@ -7,6 +7,10 @@
       = item
       .nav__bar
 
+.nav.nav--mobile
+  .nav__close onclick='toggleMenu();'
+    span
+
 #inicio.section.section--full.js-scrollable-session
   = image_tag 'logo-eps-full.svg', class: 'section__image'
 
@@ -41,7 +45,7 @@
     br
     = mail_to data.global.email, data.global.email, class: 'section__email'
     br
-    = link_to 'ENVIAR MENSAGEM ?', '#contato', onclick: 'toggleModal(this);', class: 'section__cta js-'
+    = link_to 'ENVIAR MENSAGEM ?', '#contato', onclick: 'toggleModal();', class: 'section__cta js-'
   .section__copyright Copyright © EPS Brasil. All rights reserved.
 
 
@@ -57,6 +61,9 @@
     input.form__input.form__submit type="submit" value='Enviar'
 
 javascript:
-  function toggleModal(e) {
+  function toggleModal() {
     document.body.classList.toggle('modal-is-active');
+  }
+  function toggleMenu() {
+    document.body.classList.toggle('menu-is-active');
   }

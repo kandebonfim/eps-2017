@@ -44,6 +44,62 @@
   max-width: 1.5em
   background-color: $color-blue
 
+.nav__close
+  position: absolute
+  padding: 3em
+  transition: .3s
+  right: 100%
+  top: 0
+
+  .menu-is-active &
+    width: 80px
+    height: 100%
+
+  span
+    position: relative
+    width: 30px
+    height: 4px
+    background: $color-blue
+    margin: 8px 0
+    border-radius: 2px
+    float: right
+    transition: .4s
+
+    &:before,
+    &:after
+      content: ''
+      position: absolute
+      left: 0
+      background: $color-blue
+      width: 100%
+      height: 100%
+      border-radius: inherit
+      transform: translateZ(0)
+      transition: .4s
+
+    &:before
+      bottom: 8px
+
+    &:after
+      top: 8px
+
+  body.menu-is-active & span
+    margin: 10px 0
+    background: transparent !important
+
+    &:before,
+    &:after
+      background-color: white
+
+    &:before
+      bottom: 0
+      transform: rotate(45deg)
+
+    &:after
+      top: 0
+      transform: rotate(-45deg)
+
+
 .nav--main
   left: 0
   bottom: 0
@@ -58,3 +114,18 @@
     display: none
 
 .nav--mobile
+  top: 0
+  left: 100%
+  width: 80vw
+  height: 100vh
+  background-color: $color-blue
+  box-shadow: 0 0 20em 100vw rgba(black, 0)
+  transition: .4s
+
+  body.menu-is-active &
+    left: 20%
+    box-shadow: 0 0 20em 100vw rgba(black, .9)
+
+  +bp(md)
+    display: none
+
