@@ -15,6 +15,6 @@
     "tests"
   ],
   "dependencies": {
-    "swiper": "^4.0.1"
+    "hagrid": "^3.1.0"
   }
 }

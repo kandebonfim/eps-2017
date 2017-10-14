@@ -9,18 +9,12 @@
   position: fixed
   top: 0
   left: 0
-  margin: 5em
+  margin: 3em
+  width: 3.5em
   z-index: 1
 
-.nav--main
-  left: 0
-  bottom: 0
-  margin: 5em
-  transform-origin: 0 0
-  transform: rotate(-90deg)
-  display: flex
-  flex-direction: row-reverse
-  justify-content: space-around
+  +bp(md)
+    margin: 5em
 
 .nav__item
   text-transform: uppercase
@@ -49,3 +43,18 @@
   transition: inherit
   max-width: 1.5em
   background-color: $color-blue
+
+.nav--main
+  left: 0
+  bottom: 0
+  margin: 5em
+  transform-origin: 0 0
+  transform: rotate(-90deg)
+  display: flex
+  flex-direction: row-reverse
+  justify-content: space-around
+
+  +bp(md-only)
+    display: none
+
+.nav--mobile

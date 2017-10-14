@@ -5,8 +5,16 @@
   display: flex
   margin-top: 2em
 
+  +bp(md-only)
+    flex-direction: column-reverse
+    max-width: 80vw
+
 .slider__controls
   align-self: center
+  display: flex
+
+  +bp(md)
+    flex-direction: column
 
 .slider__button
   width: 2em
@@ -17,6 +25,9 @@
   position: relative
   transition: .2s
   margin: 1.4em 0
+
+  +bp(md-only)
+    margin: 2em 1.4em 0
 
   &:after
     content: ''
@@ -45,19 +56,28 @@
       border-color: white
 
 .slider__swiper
-  min-width: 40vw
-  margin-left: 1em
+  +bp(md)
+    margin-left: 1em
+    min-width: 40vw
 
 .slider__item
   display: flex
   flex-wrap: wrap
 
 .slider__logo
-  width: calc(100% / 3 - 3em)
+  width: calc(100% / 2 - 2em)
   align-self: center
-  margin: 2em 1.5em 0 1.5em
   display: flex
   justify-content: center
+  margin-top: 2em
+
+  +bp(md-only)
+    &:nth-child(even)
+      margin-left: 2em
+
+  +bp(md)
+    width: calc(100% / 3 - 3em)
+    margin: 2em 1.5em 0 1.5em
 
   img
     max-height: 3em
