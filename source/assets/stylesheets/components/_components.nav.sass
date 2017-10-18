@@ -117,9 +117,11 @@
   left: 100%
   width: 80vw
   height: 100vh
+  padding: 3em
   background-color: $color-blue
   box-shadow: 0 0 20em 100vw rgba(black, 0)
   transition: .4s cubic-bezier(.38,1.62,.61,1)
+  color: white
 
   body.menu-is-active &
     left: 30%
@@ -128,3 +130,8 @@
   +bp(md)
     display: none
 
+  .nav__item
+    padding: 1em 0
+
+    &:hover
+      color: white

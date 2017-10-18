@@ -10,6 +10,8 @@
 .nav.nav--mobile
   .nav__close onclick='toggleMenu();'
     span
+  - data.nav.main.each do |item|
+    = link_to item, "##{item.parameterize}", class: 'nav__item js-session-link', onclick: 'toggleMenu();'
 
 #inicio.section.section--full.js-scrollable-session
   = image_tag 'logo-eps-full.svg', class: 'section__image'
