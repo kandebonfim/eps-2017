@@ -40,10 +40,9 @@ var swiper = new Swiper('.js-main-swiper', {
   parallax: true,
   longSwipesRatio: 0.05,
   speed: 500,
-  grabCursor: true,
-  nextButton: '.js-cliente-next',
-  prevButton: '.js-cliente-prev',
-  onSlideChangeEnd: function() {
+  nextButton: '.js-slider-next',
+  prevButton: '.js-slider-prev',
+  onSlideChangeStart: function() {
     if (!swiper) return;
     var sliderStatus = document.querySelector('.js-slider-status')
     sliderStatus.innerText = '0'+(swiper.realIndex+1)

@@ -22,9 +22,13 @@
         - data.solutions.each do |solution|
           .swiper-slide class="slide--#{solution.title.parameterize}"
             .slider__background data-swiper-parallax="-3000" style="background-image: url(#{image_path('bg-'+solution.title.parameterize+'.jpg')})"
-            .container
-              .section__title data-swiper-parallax="-1500" = solution.title
-              .section__paragraph data-swiper-parallax="-1000" = solution.paragraph
+            .slider__content
+              .slider__controls
+                .slider__button.js-slider-prev data-swiper-parallax="-4000"
+                .slider__button.js-slider-next data-swiper-parallax="-3000"
+              div
+                .section__title data-swiper-parallax="-1500" = solution.title
+                .section__paragraph data-swiper-parallax="-1000" = solution.paragraph
 
 #sobre.section.section--full.section--circles.js-scrollable-session style="background-image: url(#{image_path('bg-circles.png')})"
   .container
