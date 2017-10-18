@@ -9,12 +9,48 @@
     flex-direction: column-reverse
     max-width: 80vw
 
+.slider--full
+  height: 100vh
+
+  .container
+    padding-right: 10em
+
+.slider__background
+  background-position: bottom right
+  background-size: 34%
+  background-repeat: no-repeat
+  position: absolute
+  width: 100%
+  height: 100%
+
+  .slide--engenheiros-tecnicos-especializados &
+    background-size: 26% !important
+
 .slider__controls
   align-self: center
   display: flex
 
   +bp(md)
     flex-direction: column
+
+.slider__status
+  position: absolute
+  bottom: 0
+  left: 0
+  margin: 16rem
+  color: $color-blue
+  font-size: 3em
+  font-weight: 600
+  z-index: 2
+
+  &:after
+    content: attr(data-total)
+    font-size: .5em
+    position: absolute
+    top: 0
+    left: 100%
+    transform: translateY(-50%)
+    color: black
 
 .slider__button
   width: 2em

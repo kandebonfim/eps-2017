@@ -15,6 +15,16 @@
   = image_tag 'logo-eps-full.svg', class: 'section__image'
 
 #solucoes.section.section--full.section--white.js-scrollable-session
+  .slider.slider--full
+    .swiper-container.js-main-swiper
+      .slider__status.js-slider-status data-total="0#{data.solutions.length}" 01
+      .swiper-wrapper
+        - data.solutions.each do |solution|
+          .swiper-slide class="slide--#{solution.title.parameterize}"
+            .slider__background data-swiper-parallax="-3000" style="background-image: url(#{image_path('bg-'+solution.title.parameterize+'.jpg')})"
+            .container
+              .section__title data-swiper-parallax="-1500" = solution.title
+              .section__paragraph data-swiper-parallax="-1000" = solution.paragraph
 
 #sobre.section.section--full.section--circles.js-scrollable-session style="background-image: url(#{image_path('bg-circles.png')})"
   .container

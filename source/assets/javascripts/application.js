@@ -34,6 +34,24 @@ window.addEventListener('scroll', (function(event) {
   });
 }), false);
 
+var swiper = new Swiper('.js-main-swiper', {
+  loop: true,
+  slidesPerView: 1,
+  parallax: true,
+  longSwipesRatio: 0.05,
+  speed: 500,
+  grabCursor: true,
+  nextButton: '.js-cliente-next',
+  prevButton: '.js-cliente-prev',
+  onSlideChangeEnd: function() {
+    if (!swiper) return;
+    var sliderStatus = document.querySelector('.js-slider-status')
+    sliderStatus.innerText = '0'+(swiper.realIndex+1)
+  }
+});
+
+// .js-slider-status
+
 var clients = new Swiper('.js-clients', {
   pagination: '.swiper-pagination',
   paginationClickable: true,
