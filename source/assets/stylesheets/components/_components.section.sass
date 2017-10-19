@@ -92,7 +92,7 @@
 .section__copyright
   position: absolute
   right: 0
-  bottom: 0
+  top: 0
   margin: 5em
 
   +bp(md-only)
@@ -112,6 +112,10 @@
 
   .nav--mobile &
     margin-right: 9rem
+
+  &--fixed
+    position: fixed
+    z-index: 2
 
 .section__scroll
   width: 1em
