@@ -115,12 +115,13 @@
 .nav--mobile
   top: 0
   left: 100%
-  width: 80vw
+  width: calc(70vh - 6em)
   height: 100vh
-  padding: 3em
+  padding: 3em 6em 3em 3em
   background-color: $color-blue
   box-shadow: 0 0 20em 100vw rgba(black, 0)
   transition: .4s cubic-bezier(.38,1.62,.61,1)
+  box-sizing: border-box
   color: white
 
   body.menu-is-active &

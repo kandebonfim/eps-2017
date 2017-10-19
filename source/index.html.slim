@@ -12,9 +12,13 @@
     span
   - data.nav.main.each do |item|
     = link_to item, "##{item.parameterize}", class: 'nav__item js-session-link', onclick: 'toggleMenu();'
+  = link_to data.global.linkedin, target: '_blank', onclick: 'toggleMenu();' do
+    = image_tag 'linkedin-logo-white.svg', class: 'section__linkedin'
 
 #inicio.section.section--full.js-scrollable-session
   = image_tag 'logo-eps-full.svg', class: 'section__image'
+  = link_to data.global.linkedin, target: '_blank' do
+    = image_tag 'linkedin-logo-blue.svg', class: 'section__linkedin'
 
 #solucoes.section.section--full.section--white.js-scrollable-session
   .slider.slider--full
